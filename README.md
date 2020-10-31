@@ -12,8 +12,8 @@ Code → Download ZIP
 ## 作成者情報
 武田一真
 
-Twitter
+- Twitter
 https://twitter.com/pianojazz2012
 
-対面・オンラインで講義もやってます。
+- 対面・オンラインで講義もやってます。
 http://personal-lesson-programming.com/?animation
