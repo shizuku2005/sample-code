@@ -8,12 +8,6 @@ Code → Download ZIP
 でできます。（2020/10/31時点）
 ![image](https://user-images.githubusercontent.com/26203206/97776991-2d1cfa80-1bb0-11eb-8ee4-70fb2de802d5.jpg)
 
-
 ## 作成者情報
-武田一真
-
-- Twitter
-https://twitter.com/pianojazz2012
-
-- 対面・オンラインで講義もやってます。
-http://personal-lesson-programming.com/?animation
+- Twitter：https://twitter.com/pianojazz2012
+- 対面・オンラインで講義もやってます。：http://personal-lesson-programming.com/?animation
