@@ -21,17 +21,22 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
   height: 70px;
   width: 100%;
   padding-left: 30px;
-  border-bottom: 1px solid #ccc;
-  transform: translateY(-100%);
+  /* transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden; */
   transition: .5s;
 }
 
 header.active {
-  transform: none;
+  /* opacity: 1;
+  visibility: visible;
+  transform: none; */
+  /* border-bottom: 1px solid #ccc; */
+  box-shadow: 0 2px 2px #ccc;
+  background-color: #fff;
 }
 
 header .logo {
@@ -43,9 +48,12 @@ header nav ul {
   display: flex;
 }
 
+header nav ul li {
+  font-size: 18px;
+}
+
 header nav ul li:not(:first-of-type) {
   margin-left: 25px;
-  font-size: 18px;
 }
 
 header .tel {

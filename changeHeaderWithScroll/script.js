@@ -1,5 +1,4 @@
-const headerElement = document.getElementById('header'),
-      heroElement = document.getElementById('hero');
+const headerElement = document.getElementById('header');
 
 document.addEventListener('scroll', function() {
   // const scrollY = window.pageYOffset;
@@ -10,9 +9,9 @@ document.addEventListener('scroll', function() {
   //   headerElement.classList.remove('active');
   // }
 
-  if (heroElement.getBoundingClientRect().bottom < 0) {
+  if (document.getElementById('hero').getBoundingClientRect().bottom < 0) {
     headerElement.classList.add('active');
   } else {
     headerElement.classList.remove('active');
   }
-})
+});

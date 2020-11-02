@@ -1,6 +1,7 @@
 # サンプルコード集
 
 このリポジトリはYoutubeの「フロントエンドチャンネル」内で配信している動画のコードをサンプル・デモとして参照できる様にしてあるものです。
+
 URL: https://www.youtube.com/channel/UCVCL3vTcA9NcxmMWhz8bS7Q
 
 ファイルのダウンロード方法は以下の様に
