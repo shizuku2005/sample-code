@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+$breakPoint: 768px;
+
+@mixin mediaTablet {
+  @media screen and (max-width: $breakPoint) {
+    @content;
+  }
+}
+
+@mixin mediaPc {
+  @media screen and (min-width: $breakPoint + 1px) {
+    @content;
+  }
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  h1 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 0.5em;
+  }
+
+  .inputs {
+    background-color: #eee;
+    padding: 20px;
+    margin-bottom: 50px;
+    button {
+      $buttonColor: #16f;
+      display: block;
+      color: #fff;
+      background-color: $buttonColor;
+      box-shadow: 0 3px darken($buttonColor, 30%);
+      font-size: 18px;
+      border: 0;
+      outline: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: .3s;
+      @include mediaPc {
+        &:hover {
+          transform: translateY(3px);
+          box-shadow: 0 0;
+        }
+      }
+    }
+  }
+
+  .passwordList {
+    li {
+      input {
+        font-size: 20px;
+        padding: 7px;
+      }
+    }
+  }
+}
