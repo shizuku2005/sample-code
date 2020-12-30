@@ -10,5 +10,5 @@ Code → Download ZIP
 ![image](https://user-images.githubusercontent.com/26203206/97776991-2d1cfa80-1bb0-11eb-8ee4-70fb2de802d5.jpg)
 
 ## 作成者情報
-- Twitter：https://twitter.com/pianojazz2012
+- Twitter（Youtube動画などの通知用）：https://twitter.com/prog_factory
 - 対面・オンラインで講義もやってます。：http://personal-lesson-programming.com/?animation
