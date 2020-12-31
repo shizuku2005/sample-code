@@ -53,8 +53,16 @@ main {
       dt {
         font-weight: bold;
         margin-bottom: .5em;
+        &:not(:first-of-type) {
+          margin-top: 30px;
+        }
       }
       dd {
+        label {
+          &:not(:last-of-type) {
+            margin-right: 30px;
+          }
+        }
         input {
           @include inputStyle;
         }

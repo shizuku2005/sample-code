@@ -39,6 +39,14 @@ main .inputs dl dt {
   margin-bottom: .5em;
 }
 
+main .inputs dl dt:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+main .inputs dl dd label:not(:last-of-type) {
+  margin-right: 30px;
+}
+
 main .inputs dl dd input {
   font-size: 20px;
   padding: 7px;

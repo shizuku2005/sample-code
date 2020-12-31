@@ -14,6 +14,18 @@
 
     <form name="inputs" class="inputs">
       <dl>
+        <dt>パスワードを構成する文字（半角カンマ区切りで入力できます）</dt>
+        <dd>
+          <input type="checkbox" id="includeNumber" checked>
+          <label for="includeNumber">数字</label>
+
+          <input type="checkbox" id="includeEnglishLowercase">
+          <label for="includeEnglishLowercase">英語の小文字</label>
+
+          <input type="checkbox" id="includeEnglishUppercase">
+          <label for="includeEnglishUppercase">英語の大文字</label>
+        </dd>
+
         <dt>除外する文字（半角カンマ区切りで入力できます）</dt>
         <dd>
           <input type="text" id="excludeTexts">
