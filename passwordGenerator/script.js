@@ -5,7 +5,6 @@ document.getElementById('excludeTexts').value = baseExcludesTexts.join(',');
 const inputs = document.forms.inputs,
       passwordListElement = document.getElementById('passwordList'),
 
-      passwordLength = 6,
       generatedNumberOfTimes = 3;
 
 
@@ -17,8 +16,6 @@ document.getElementById('generateButton').addEventListener('click', e => {
         isIncludeNumber = inputs.includeNumber.checked;
 
   if (isIncludeEnglishLowercase || isIncludeEnglishUppercase || isIncludeNumber) {
-
-    passwordListElement.innerHTML = '';
 
     // パスワードを生成する為の配列を作る
     const passwordTexts = [];
@@ -45,16 +42,31 @@ document.getElementById('generateButton').addEventListener('click', e => {
     const excludeTexts = inputs.excludeTexts.value.split(','),
           excludedpasswordTexts = passwordTexts.filter(text => !(excludeTexts.includes(String(text))));
 
-    for (let i = 0; i < generatedNumberOfTimes; i++) {
-      let passwords = '';
-      for (let i = 0; i < passwordLength; i++) {
-        passwords += excludedpasswordTexts[Math.floor(Math.random() * excludedpasswordTexts.length)];
+    let passwordLength = inputs.stringLength.value,
+        isOutOfRange = false;
+    if (passwordLength === 'custom') {
+      passwordLength = inputs.customLength.value;
+      if (passwordLength < 1 || passwordLength > 100) {
+        alert('文字数は１〜１００の中で設定してください')
+        isOutOfRange = true;
       }
-      const li = document.createElement('li'),
-            input = document.createElement('input');
-      input.value = passwords;
-      li.appendChild(input);
-      passwordListElement.appendChild(li);
+    } else {
+      passwordLength = Number(passwordLength)
+    }
+
+    if (!isOutOfRange) {
+      passwordListElement.innerHTML = '';
+      for (let i = 0; i < generatedNumberOfTimes; i++) {
+        let passwords = '';
+        for (let i = 0; i < passwordLength; i++) {
+          passwords += excludedpasswordTexts[Math.floor(Math.random() * excludedpasswordTexts.length)];
+        }
+        const li = document.createElement('li'),
+              input = document.createElement('input');
+        input.value = passwords;
+        li.appendChild(input);
+        passwordListElement.appendChild(li);
+      }
     }
 
   } else {

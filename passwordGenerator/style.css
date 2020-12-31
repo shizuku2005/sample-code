@@ -40,7 +40,7 @@ main .inputs dl dt {
 }
 
 main .inputs dl dt:not(:first-of-type) {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 main .inputs dl dd label:not(:last-of-type) {
@@ -50,6 +50,10 @@ main .inputs dl dd label:not(:last-of-type) {
 main .inputs dl dd input {
   font-size: 20px;
   padding: 7px;
+}
+
+main .inputs dl dd input[type="number"] {
+  min-width: 100px;
 }
 
 main .inputs button {
@@ -63,7 +67,7 @@ main .inputs button {
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 50px auto 0;
   cursor: pointer;
   transition: .3s;
 }
