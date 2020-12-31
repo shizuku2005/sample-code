@@ -3,10 +3,7 @@ const baseExcludesTexts = ['o', 'O', '0', 'I', 'l', '1'];
 document.getElementById('excludeTexts').value = baseExcludesTexts.join(',');
 
 const inputs = document.forms.inputs,
-      passwordListElement = document.getElementById('passwordList'),
-
-      generatedNumberOfTimes = 3;
-
+      passwordListElement = document.getElementById('passwordList');
 
 document.getElementById('generateButton').addEventListener('click', e => {
   e.preventDefault();
@@ -54,9 +51,20 @@ document.getElementById('generateButton').addEventListener('click', e => {
       passwordLength = Number(passwordLength)
     }
 
+    let numberOfPasswords = inputs.numberOfPasswords.value;
+    if (numberOfPasswords === 'custom') {
+      numberOfPasswords = inputs.custonNumberOfPasswordsInput.value;
+      if (numberOfPasswords < 1 || numberOfPasswords > 100) {
+        alert('生成するパスワードの個数は１〜１００の中で設定してください')
+        isOutOfRange = true;
+      }
+    } else {
+      numberOfPasswords = Number(numberOfPasswords)
+    }
+
     if (!isOutOfRange) {
       passwordListElement.innerHTML = '';
-      for (let i = 0; i < generatedNumberOfTimes; i++) {
+      for (let i = 0; i < numberOfPasswords; i++) {
         let passwords = '';
         for (let i = 0; i < passwordLength; i++) {
           passwords += excludedpasswordTexts[Math.floor(Math.random() * excludedpasswordTexts.length)];

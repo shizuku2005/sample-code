@@ -42,6 +42,19 @@
           <input id="customLength" type="number" min="1" max="100" placeholder="1~100">
         </dd>
 
+        <dt>生成するパスワードの個数</dt>
+        <dd>
+          <input type="radio" name="numberOfPasswords" id="tenPasswords" value="10" checked>
+          <label for="tenPasswords">１０個</label>
+
+          <input type="radio" name="numberOfPasswords" id="thirtyPasswords" value="30">
+          <label for="thirtyPasswords">３０個</label>
+
+          <input type="radio" name="numberOfPasswords" id="custonNumberOfPasswords" value="custom">
+          <label for="custonNumberOfPasswords">カスタム</label>
+          <input id="custonNumberOfPasswordsInput" type="number" min="1" max="100" placeholder="1~100">
+        </dd>
+
         <dt>除外する文字（半角カンマ区切りで入力できます）</dt>
         <dd>
           <input type="text" id="excludeTexts">

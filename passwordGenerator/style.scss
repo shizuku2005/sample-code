@@ -96,7 +96,21 @@ main {
   }
 
   .passwordList {
+    counter-reset: passwordNumber 0;
     li {
+      position: relative;
+      padding-left: 2.5em;
+      &:not(:first-of-type) {
+        margin-top: 10px;
+      }
+      &::before {
+        counter-increment: passwordNumber 1;
+        content: counter(passwordNumber);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
       input {
         @include inputStyle;
       }
