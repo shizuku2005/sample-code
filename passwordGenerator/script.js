@@ -70,10 +70,28 @@ document.getElementById('generateButton').addEventListener('click', e => {
           passwords += excludedpasswordTexts[Math.floor(Math.random() * excludedpasswordTexts.length)];
         }
         const li = document.createElement('li'),
-              input = document.createElement('input');
+              input = document.createElement('input'),
+              copyButton = document.createElement('a');
         input.value = passwords;
         li.appendChild(input);
         passwordListElement.appendChild(li);
+
+        copyButton.textContent = 'コピーする';
+        copyButton.classList.add('copyButton');
+        copyButton.addEventListener('click', () =>  {
+          const textarea = document.createElement('textarea');
+          textarea.textContent = passwords;
+
+          const body = document.querySelector('body');
+          body.appendChild(textarea);
+
+          textarea.select();
+          document.execCommand('copy');
+          body.removeChild(textarea);
+
+          alert(`パスワード「${passwords}」をコピーしました！`)
+        })
+        li.appendChild(copyButton);
       }
     }
 

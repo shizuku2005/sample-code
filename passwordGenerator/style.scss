@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 $breakPoint: 768px;
+$mainColor: #16f;
 
 @mixin mediaTablet {
   @media screen and (max-width: $breakPoint) {
@@ -58,9 +59,13 @@ main {
         }
       }
       dd {
-        label {
-          &:not(:last-of-type) {
-            margin-right: 30px;
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            &:not(:last-of-type) {
+              margin-right: 30px;
+            }
           }
         }
         input {
@@ -72,11 +77,10 @@ main {
       }
     }
     button {
-      $buttonColor: #16f;
       display: block;
       color: #fff;
-      background-color: $buttonColor;
-      box-shadow: 0 3px darken($buttonColor, 30%);
+      background-color: $mainColor;
+      box-shadow: 0 3px darken($mainColor, 30%);
       font-size: 18px;
       border: 0;
       outline: none;
@@ -97,6 +101,9 @@ main {
 
   .passwordList {
     counter-reset: passwordNumber 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     li {
       position: relative;
       padding-left: 2.5em;
@@ -113,6 +120,61 @@ main {
       }
       input {
         @include inputStyle;
+      }
+      .copyButton {
+        display: inline-block;
+        padding: 10px;
+        color: $mainColor;
+        border: 2px solid $mainColor;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        @include mediaPc {
+          transition: .3s;
+          &:hover {
+            opacity: .5;
+          }
+        }
+      }
+    }
+  }
+
+  @include mediaTablet {
+    margin: 0 auto;
+
+    .inputs {
+      dl {
+        dt {
+          line-height: 1.4;
+        }
+        dd {
+          ul {
+            display: block;
+            li {
+              &:not(:last-of-type) {
+                margin-right: 0;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .passwordList {
+      li {
+        display: flex;
+        &::before {
+          $inputHeight: 41px;
+          top: $inputHeight / 2;
+        }
+        input {
+          width: 120px;
+        }
+        .copyButton {
+          white-space: nowrap;
+        }
       }
     }
   }

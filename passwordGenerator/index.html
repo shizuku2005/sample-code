@@ -16,43 +16,69 @@
       <dl>
         <dt>パスワードを構成する文字（少なくとも１つ以上の項目にチェックを入れてください）</dt>
         <dd>
-          <input type="checkbox" id="includeNumber" checked>
-          <label for="includeNumber">数字</label>
+          <ul>
+            <li>
+              <input type="checkbox" id="includeNumber" checked>
+              <label for="includeNumber">数字</label>
+            </li>
 
-          <input type="checkbox" id="includeEnglishLowercase">
-          <label for="includeEnglishLowercase">英語の小文字</label>
+            <li>
+              <input type="checkbox" id="includeEnglishLowercase">
+              <label for="includeEnglishLowercase">英語の小文字</label>
+            </li>
 
-          <input type="checkbox" id="includeEnglishUppercase">
-          <label for="includeEnglishUppercase">英語の大文字</label>
+            <li>
+              <input type="checkbox" id="includeEnglishUppercase">
+              <label for="includeEnglishUppercase">英語の大文字</label>
+            </li>
+          </ul>
         </dd>
 
         <dt>文字数</dt>
         <dd>
-          <input type="radio" name="stringLength" id="six" value="6" checked>
-          <label for="six">６文字</label>
+          <ul>
+            <li>
+              <input type="radio" name="stringLength" id="six" value="6" checked>
+              <label for="six">６文字</label>
+            </li>
 
-          <input type="radio" name="stringLength" id="eight" value="8">
-          <label for="eight">８文字</label>
+            <li>
+              <input type="radio" name="stringLength" id="eight" value="8">
+              <label for="eight">８文字</label>
+            </li>
 
-          <input type="radio" name="stringLength" id="twelve" value="12">
-          <label for="twelve">１２文字</label>
+            <li>
+              <input type="radio" name="stringLength" id="twelve" value="12">
+              <label for="twelve">１２文字</label>
+            </li>
 
-          <input type="radio" name="stringLength" id="custom" value="custom">
-          <label for="custom">カスタム</label>
-          <input id="customLength" type="number" min="1" max="100" placeholder="1~100">
+            <li>
+              <input type="radio" name="stringLength" id="custom" value="custom">
+              <label for="custom">カスタム</label>
+              <input id="customLength" type="number" min="1" max="100" placeholder="1~100">
+            </li>
+          </ul>
         </dd>
 
         <dt>生成するパスワードの個数</dt>
         <dd>
-          <input type="radio" name="numberOfPasswords" id="tenPasswords" value="10" checked>
-          <label for="tenPasswords">１０個</label>
+          <ul>
+            <li>
+              <input type="radio" name="numberOfPasswords" id="tenPasswords" value="10" checked>
+              <label for="tenPasswords">１０個</label>
+            </li>
 
-          <input type="radio" name="numberOfPasswords" id="thirtyPasswords" value="30">
-          <label for="thirtyPasswords">３０個</label>
+            <li>
+              <input type="radio" name="numberOfPasswords" id="thirtyPasswords" value="30">
+              <label for="thirtyPasswords">３０個</label>
+            </li>
 
-          <input type="radio" name="numberOfPasswords" id="custonNumberOfPasswords" value="custom">
-          <label for="custonNumberOfPasswords">カスタム</label>
-          <input id="custonNumberOfPasswordsInput" type="number" min="1" max="100" placeholder="1~100">
+            <li>
+              <input type="radio" name="numberOfPasswords" id="custonNumberOfPasswords" value="custom">
+              <label for="custonNumberOfPasswords">カスタム</label>
+              <input id="custonNumberOfPasswordsInput" type="number" min="1" max="100" placeholder="1~100">
+            </li>
+          </ul>
         </dd>
 
         <dt>除外する文字（半角カンマ区切りで入力できます）</dt>
