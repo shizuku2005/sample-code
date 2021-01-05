@@ -66,7 +66,7 @@ document.getElementById('generateButton').addEventListener('click', e => {
       passwordListElement.innerHTML = '';
       for (let i = 0; i < numberOfPasswords; i++) {
         let passwords = '';
-        for (let i = 0; i < passwordLength; i++) {
+        for (let j = 0; j < passwordLength; j++) {
           passwords += excludedpasswordTexts[Math.floor(Math.random() * excludedpasswordTexts.length)];
         }
         const li = document.createElement('li'),
@@ -74,11 +74,10 @@ document.getElementById('generateButton').addEventListener('click', e => {
               copyButton = document.createElement('a');
         input.value = passwords;
         li.appendChild(input);
-        passwordListElement.appendChild(li);
 
         copyButton.textContent = 'コピーする';
         copyButton.classList.add('copyButton');
-        copyButton.addEventListener('click', () =>  {
+        copyButton.addEventListener('click', () => {
           const textarea = document.createElement('textarea');
           textarea.textContent = passwords;
 
@@ -92,6 +91,8 @@ document.getElementById('generateButton').addEventListener('click', e => {
           alert(`パスワード「${passwords}」をコピーしました！`)
         })
         li.appendChild(copyButton);
+
+        passwordListElement.appendChild(li);
       }
     }
 

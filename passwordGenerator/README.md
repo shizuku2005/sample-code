@@ -4,11 +4,17 @@
 - 今回ツールを作成している目的はJavaScriptコーディングの練習の為であり、実用的なツールを目指すものではありません。セキュリティ性が高いものを作るには、アルゴリズムやより高度な関数関数などを使用する必要があります。
 
 ## 関連する動画URLなど
-- polyfill, Babelについて
+- polyfill（ポリフィル）, Babel（バベル）について
 https://youtu.be/Zw2Y4G6N-x0
 
-- アロー関数について
+- JSのアロー（arrow）関数について
 https://youtu.be/pp_0uM-dy68
+
+- JSのforEachについて
+https://youtu.be/6q3F_XRfPq4
+
+- dl, dt, ddについて
+https://youtu.be/kHMz32_Jkcc
 
 - HTMLのformについて（再生リスト）
 https://youtube.com/playlist?list=PLv7E5OqNAIPw_uK_fcbnfgl6z1A69tSlo
